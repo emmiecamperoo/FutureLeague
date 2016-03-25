@@ -5,3 +5,23 @@
   font-size: 2rem;
 	font-weight: $light;
 }
+
+/* Mailchimp error and response stuff */
+#mc_embed_signup {
+	.form-control.mce_inline_error {
+		border-color: #ff0000;
+	}
+	div.mce_inline_error {
+		display: none !important;
+	}
+	.btn {
+		@media #{$small-and-down} {
+	    margin-top: 1.4rem;
+	  }
+	}
+}
+#mce-responses {
+	#mce-error-response {
+
+	}
+}

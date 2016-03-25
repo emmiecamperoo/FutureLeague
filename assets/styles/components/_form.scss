@@ -3,7 +3,7 @@
 \*----------------------------------*/
 /* Form row properties */
 .form-row {
-  margin-bottom: 1rem;
+  margin-bottom: 1.4rem;
   padding-right: 1rem;
   padding-left: 1rem;
 
@@ -74,18 +74,4 @@ textarea {
 /* Checkbox properties */
 input[type=checkbox] {
   outline: none;
-}
-/* Mailchimp error and response stuff */
-#mc_embed_signup {
-	.form-control.mce_inline_error {
-		border-color: #ff0000;
-	}
-	div.mce_inline_error {
-		display: none !important;
-	}
-}
-#mce-responses {
-	#mce-error-response {
-
-	}
 }
