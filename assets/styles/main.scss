@@ -37,9 +37,9 @@ body {
   font-family: $font-primary;
   line-height: 1.4;
   margin: 0;
-  padding-top: 80px;
   color: $color-black;
-  background: $color-gray-lighter;
+  background: url('../images/background.jpg') no-repeat center center;
+	background-size: cover;
 }
 /*
 	Heading properties
