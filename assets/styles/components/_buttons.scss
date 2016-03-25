@@ -1,0 +1,43 @@
+/*----------------------------------*\
+		Buttons
+\*----------------------------------*/
+.btn {
+  font-size: 1rem;
+  display: inline-block;
+  overflow: hidden;
+  padding: 9px 12px;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+  color: $color-white;
+	letter-spacing: 5px;
+	font-weight: $light;
+  border: none;
+  border-radius: 2px;
+  background: $color-primary;
+  box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, .24);
+  @include transition(.2s ease-in-out);
+  /* Hover state */
+  &:hover {
+    color: $color-white;
+    background: darken($color-primary, 5%);
+  }
+  /* Active state */
+  &:active {
+    box-shadow: 0 1px 3px 1px rgba(0, 0, 0, .24);
+  }
+  /* Focus state shows only on mobile */
+  @media #{$small-and-down} {
+    &:focus {
+      color: $color-white;
+      background: darken($color-primary, 5%);
+    }
+  }
+	&--block {
+		width: 100%;
+		height: 90px;
+		font-size: 40px;
+	}
+}

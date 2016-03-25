@@ -23,7 +23,8 @@
 /*
 	Components
 */
-
+@import 'components/form';
+@import 'components/buttons';
 /*
 	Default Tags
 */
@@ -31,8 +32,8 @@ html {
   font-size: 15px;
 }
 
-html,
 body,
+html,
 main {
   height: 100%;
 }
@@ -41,9 +42,9 @@ body {
   font-family: $font-primary;
   line-height: 1.4;
   margin: 0;
-  color: $color-black;
+  color: $color-white;
   background: url('../images/background.jpg') no-repeat center center;
-	background-size: cover;
+  background-size: cover;
 }
 /*
 	Heading properties
@@ -55,7 +56,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: $light;
+  font-weight: $bold;
   margin: 0 0 0.8rem;
   text-transform: uppercase;
 }

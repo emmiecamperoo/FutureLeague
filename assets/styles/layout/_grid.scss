@@ -126,3 +126,85 @@
 @media #{$large-and-up} {
    @include columns( 'col-lg');
 }
+
+/*
+	Columns Offset
+*/
+/* Create columns offset from sizes 1-12 */
+@mixin columns-offset ($class) {
+  .#{$class}-1 {
+    margin-left: 8.33333333%;
+  }
+
+  .#{$class}-2 {
+    margin-left: 16.66666667%;
+  }
+
+  .#{$class}-3 {
+    margin-left: 25%;
+  }
+
+  .#{$class}-4 {
+    margin-left: 33.3333333333%;
+  }
+
+  .#{$class}-5 {
+    margin-left: 41.66666667%;
+  }
+
+  .#{$class}-6 {
+    margin-left: 50%;
+  }
+
+  .#{$class}-7 {
+    margin-left: 58.33333333%;
+  }
+
+  .#{$class}-8 {
+    margin-left: 66.66666667%;
+  }
+
+  .#{$class}-9 {
+    margin-left: 75%;
+  }
+
+  .#{$class}-10 {
+    margin-left: 83.33333333%;
+  }
+
+  .#{$class}-11 {
+    margin-left: 91.66666667%;
+  }
+
+  .#{$class}-12 {
+    margin-left: 100%;
+  }
+}
+/* Columns offset for Extra-Small screen and down */
+@media #{$extra-small-and-down} {
+   @include columns-offset( 'col-xs-offset');
+}
+/* Columns offset for Extra-Small screen */
+@media #{$extra-small-and-up} {
+   @include columns-offset( 'col-xs-offset');
+}
+/* Columns offset for Small screen */
+@media #{$small-and-up} {
+   @include columns-offset( 'col-sm-offset');
+}
+/* Columns offset for Medium screen */
+@media #{$medium-and-up} {
+   @include columns-offset( 'col-md-offset');
+}
+/* Columns offset for Large screen */
+@media #{$large-and-up} {
+   @include columns-offset( 'col-lg-offset');
+}
+/* Elements have padding and border included in the element's total width and height */
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
