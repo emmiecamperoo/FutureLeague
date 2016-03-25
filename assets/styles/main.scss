@@ -20,11 +20,13 @@
 	Layout
 */
 @import 'layout/grid';
+@import 'layout/footer';
 /*
 	Components
 */
 @import 'components/form';
 @import 'components/buttons';
+@import 'components/newsletter';
 /*
 	Default Tags
 */
@@ -36,6 +38,7 @@ body,
 html,
 main {
   height: 100%;
+	overflow: auto;
 }
 
 body {

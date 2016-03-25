@@ -1,24 +1,30 @@
 @@include(markdown('header.html'))
 <!-- Start of Mailchimp Sign up Form -->
-<section class="newsletter">
+<section class="newsletter mt90 mb150">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
 				<h3 class="mt0 mb15">Get on the waitlist</h3>
-				<form class="newsletter__form row" action="index.html" method="post">
-					<div class="form-row">
-						<input type="text" class="form-control" name="email" value="" placeholder="Email">
-					</div>
-					<div class="form-row row">
-						<div class="col-md-5">
-							<input type="text" class="form-control" name="zipcode" value="" placeholder="Zip Code">
+				<div class="newsletter__form">
+					<form class="row" action="index.html" method="post">
+						<div class="form-row">
+							<input type="text" class="form-control" name="email" value="" placeholder="Email">
+						</div>
+						<div class="form-row row">
+							<div class="col-md-5">
+								<input type="text" class="form-control" name="zipcode" value="" placeholder="Zip Code">
 
+							</div>
+							<div class="col-md-7">
+								<button type="submit" class="btn btn--block" name="submit">Submit</button>
+							</div>
 						</div>
-						<div class="col-md-7">
-							<button type="submit" class="btn btn--block" name="submit">Submit</button>
-						</div>
-					</div>
-				</form>
+					</form>
+				</div>
+			</div>
+			<div class="newsletter__text col-md-12">
+				<p class="text-center mt90">The premiere guide to STEM camps and activities in the SF Bay Area</p>
+				<p class="text-center">Launching in late February 2016</p>
 			</div>
 		</div>
 	</div>
