@@ -41,7 +41,7 @@
   @include transition(.2s ease-in-out);
 
   &:focus {
-    border-color: $color-gray;
+    border-color: $color-primary;
   }
 
   &::-webkit-input-placeholder {
@@ -74,4 +74,18 @@ textarea {
 /* Checkbox properties */
 input[type=checkbox] {
   outline: none;
+}
+/* Mailchimp error and response stuff */
+#mc_embed_signup {
+	.form-control.mce_inline_error {
+		border-color: #ff0000;
+	}
+	div.mce_inline_error {
+		display: none !important;
+	}
+}
+#mce-responses {
+	#mce-error-response {
+
+	}
 }

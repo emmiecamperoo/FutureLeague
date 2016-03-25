@@ -3,26 +3,36 @@
 \*----------------------------------*/
 .btn {
   font-size: 1rem;
+  font-weight: $light;
   display: inline-block;
   overflow: hidden;
   padding: 9px 12px;
   text-align: center;
   white-space: nowrap;
   text-decoration: none;
+  letter-spacing: 6px;
   text-transform: uppercase;
   text-overflow: ellipsis;
   color: $color-white;
-	letter-spacing: 6px;
-	font-weight: $light;
   border: none;
   border-radius: 4px;
-  background: $color-primary;
-  box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, .24);
-  @include transition(.2s ease-in-out);
+  background-color: $color-primary;
+  background-image: -webkit-gradient(linear, left top, left bottom, from($color-primary), to($color-primary-dark));
+  background-image: -webkit-linear-gradient(top, $color-primary, $color-primary-dark);
+  background-image: -moz-linear-gradient(top, $color-primary, $color-primary-dark);
+  background-image: -ms-linear-gradient(top, $color-primary, $color-primary-dark);
+  background-image: -o-linear-gradient(top, $color-primary, $color-primary-dark);
+  background-image: linear-gradient(to bottom, $color-primary, $color-primary-dark);
   /* Hover state */
   &:hover {
     color: $color-white;
-    background: darken($color-primary, 5%);
+		background-color: $color-primary;
+	  background-image: -webkit-gradient(linear, left top, left bottom, from(darken($color-primary, 5%)), to(darken($color-primary-dark, 5%)));
+	  background-image: -webkit-linear-gradient(top, darken($color-primary, 5%), darken($color-primary-dark, 5%));
+	  background-image: -moz-linear-gradient(top, darken($color-primary, 5%), darken($color-primary-dark, 5%));
+	  background-image: -ms-linear-gradient(top, darken($color-primary, 5%), darken($color-primary-dark, 5%));
+	  background-image: -o-linear-gradient(top, darken($color-primary, 5%), darken($color-primary-dark, 5%));
+	  background-image: linear-gradient(to bottom, darken($color-primary, 5%), darken($color-primary-dark, 5%));
   }
   /* Active state */
   &:active {
@@ -35,9 +45,10 @@
       background: darken($color-primary, 5%);
     }
   }
-	&--block {
-		width: 100%;
-		height: 90px;
-		font-size: 40px;
-	}
+
+  &--block {
+    font-size: 40px;
+    width: 100%;
+    height: 90px;
+  }
 }
