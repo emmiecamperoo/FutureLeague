@@ -12,7 +12,10 @@
     border-color: #f00;
   }
 
-  div.mce_inline_error {
+  .form-row div.mce_inline_error {
+		background-color: transparent;
+		font-weight: $normal;
+		padding: 5px 0 0 0;
   }
 
   .btn {
