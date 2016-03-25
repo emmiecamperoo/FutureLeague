@@ -7,19 +7,21 @@
   display: inline-block;
   margin: 0 60px;
   text-decoration: none;
-
+  /* Remove margin left from first link */
   &:first-child {
     margin-left: 0;
   }
-
+  /* Remove margin right from last link */
   &:last-child {
     margin-right: 0;
   }
+  /* Responsive */
   @media #{$small-and-down} {
     display: block;
     margin: 20px 0 0;
-		&:first-child {
-	    margin-top: 0;
-	  }
+    /* Remove margin top from first link */
+    &:first-child {
+      margin-top: 0;
+    }
   }
 }

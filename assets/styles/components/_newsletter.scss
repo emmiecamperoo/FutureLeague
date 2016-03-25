@@ -1,28 +1,31 @@
 /*----------------------------------*\
 		Newsletter
 \*----------------------------------*/
+/* Text under the newsletter */
 .newsletter__text {
   font-size: 2rem;
-	font-weight: $light;
+  font-weight: $light;
 }
-
-/* Mailchimp error and response stuff */
+/* Mailchimp error properties */
 #mc_embed_signup {
-	.form-control.mce_inline_error {
-		border-color: #ff0000;
-	}
-	div.mce_inline_error {
-		display: none !important;
-	}
-	.btn {
-		@media #{$small-and-down} {
-	    margin-top: 1.4rem;
-	  }
-	}
+  .form-control.mce_inline_error {
+    border-color: #f00;
+  }
+
+  div.mce_inline_error {
+    display: none !important;
+  }
+
+  .btn {
+    @media #{$small-and-down} {
+      margin-top: 1.4rem;
+    }
+  }
 }
+/* Mailchimp response properties */
 #mce-responses {
-	.response {
-		font-size: 1.4rem;
-		font-weight: $light;
-	}
+  .response {
+    font-size: 1.4rem;
+    font-weight: $light;
+  }
 }
