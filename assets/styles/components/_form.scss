@@ -1,0 +1,83 @@
+/*----------------------------------*\
+		Form
+\*----------------------------------*/
+/* Form row properties */
+.form-row {
+  position: relative;
+  margin-bottom: 1.4rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+
+  &--wide {
+    width: 100%;
+  }
+
+  &--first,
+  &--last {
+    width: 50%;
+  }
+
+  label {
+    font-size: 0.9rem;
+  }
+}
+/* Form control properties - child of form row */
+.form-control {
+  font-family: inherit;
+  font-size: 1.4rem;
+  line-height: 56px;
+  display: block;
+  width: 100%;
+  font-weight: $light;
+  height: 56px;
+  padding: 0 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $color-white;
+  border: 1px solid $color-white;
+  border-radius: 6px;
+  outline: none;
+  background: transparent;
+  background-image: none;
+  box-shadow: inset 0 0 8px $color-white;
+  @include transition(.2s ease-in-out);
+  /* Responsive properties */
+  @media #{$small-and-down} {
+    font-size: 1.6rem;
+  }
+  /* Focus state */
+  &:focus {
+    border-color: $color-primary;
+  }
+  /* Input placeholder color */
+  &::-webkit-input-placeholder {
+    color: $color-white;
+  }
+
+  &:-moz-placeholder {
+    opacity: 1;
+    color: $color-white;
+  }
+
+  &::-moz-placeholder {
+    opacity: 1;
+    color: $color-white;
+  }
+
+  &:-ms-input-placeholder {
+    color: $color-white;
+  }
+
+  &:placeholder-shown {
+    color: $color-white;
+  }
+}
+/* Textarea properties */
+textarea {
+  max-width: 100%;
+  min-height: 150px;
+}
+/* Checkbox properties */
+input[type=checkbox] {
+  outline: none;
+}

@@ -1,0 +1,209 @@
+/*----------------------------------*\
+    Grid
+\*----------------------------------*/
+/*
+	Container and row
+*/
+/* Container main css and it's width */
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  /*
+		Responsive media query
+		On Extra-Small screens and down, container is full width
+	*/
+  /* Width 49rem which equals 735px - based on html font-size 15px */
+  @media #{$small-and-up} {
+    width: 49rem;
+  }
+  /* Width 65rem which equals 975px - based on html font-size 15px */
+  @media #{$medium-and-up} {
+    width: 65rem;
+  }
+}
+/* Fluid container aka full width */
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+/* Row is wraper of columns, it removes extra padding of columns left and right to fit container width */
+.row {
+  margin-right: -1rem;
+  margin-left: -1rem;
+
+  &:after,
+  &:before {
+    display: table;
+    content: '';
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+/*
+	Columns
+*/
+/* Add padding left and right to all columns. Width: 100% added to fill the container if any column size is not defined */
+[class*=' col-'],
+[class^='col-'] {
+  float: left;
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+/* Create columns from sizes 1-12 */
+@mixin columns ($class) {
+  .#{$class}-1 {
+    width: 8.33333333%;
+  }
+
+  .#{$class}-2 {
+    width: 16.66666667%;
+  }
+
+  .#{$class}-3 {
+    width: 25%;
+  }
+
+  .#{$class}-4 {
+    width: 33.3333333333%;
+  }
+
+  .#{$class}-5 {
+    width: 41.66666667%;
+  }
+
+  .#{$class}-6 {
+    width: 50%;
+  }
+
+  .#{$class}-7 {
+    width: 58.33333333%;
+  }
+
+  .#{$class}-8 {
+    width: 66.66666667%;
+  }
+
+  .#{$class}-9 {
+    width: 75%;
+  }
+
+  .#{$class}-10 {
+    width: 83.33333333%;
+  }
+
+  .#{$class}-11 {
+    width: 91.66666667%;
+  }
+
+  .#{$class}-12 {
+    width: 100%;
+  }
+}
+/* Columns for Extra-Small screen and down */
+@media #{$extra-small-and-down} {
+   @include columns( 'col-xs');
+}
+/* Columns for Extra-Small screen */
+@media #{$extra-small-and-up} {
+   @include columns( 'col-xs');
+}
+/* Columns for Small screen */
+@media #{$small-and-up} {
+   @include columns( 'col-sm');
+}
+/* Columns for Medium screen */
+@media #{$medium-and-up} {
+   @include columns( 'col-md');
+}
+/* Columns for Large screen */
+@media #{$large-and-up} {
+   @include columns( 'col-lg');
+}
+/*
+	Columns Offset
+*/
+/* Create columns offset from sizes 1-12 */
+@mixin columns-offset ($class) {
+  .#{$class}-1 {
+    margin-left: 8.33333333%;
+  }
+
+  .#{$class}-2 {
+    margin-left: 16.66666667%;
+  }
+
+  .#{$class}-3 {
+    margin-left: 25%;
+  }
+
+  .#{$class}-4 {
+    margin-left: 33.3333333333%;
+  }
+
+  .#{$class}-5 {
+    margin-left: 41.66666667%;
+  }
+
+  .#{$class}-6 {
+    margin-left: 50%;
+  }
+
+  .#{$class}-7 {
+    margin-left: 58.33333333%;
+  }
+
+  .#{$class}-8 {
+    margin-left: 66.66666667%;
+  }
+
+  .#{$class}-9 {
+    margin-left: 75%;
+  }
+
+  .#{$class}-10 {
+    margin-left: 83.33333333%;
+  }
+
+  .#{$class}-11 {
+    margin-left: 91.66666667%;
+  }
+
+  .#{$class}-12 {
+    margin-left: 100%;
+  }
+}
+/* Columns offset for Extra-Small screen and down */
+@media #{$extra-small-and-down} {
+   @include columns-offset( 'col-xs-offset');
+}
+/* Columns offset for Extra-Small screen */
+@media #{$extra-small-and-up} {
+   @include columns-offset( 'col-xs-offset');
+}
+/* Columns offset for Small screen */
+@media #{$small-and-up} {
+   @include columns-offset( 'col-sm-offset');
+}
+/* Columns offset for Medium screen */
+@media #{$medium-and-up} {
+   @include columns-offset( 'col-md-offset');
+}
+/* Columns offset for Large screen */
+@media #{$large-and-up} {
+   @include columns-offset( 'col-lg-offset');
+}
+/* Elements have padding and border included in the element's total width and height */
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}

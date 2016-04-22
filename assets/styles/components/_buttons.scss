@@ -1,0 +1,61 @@
+/*----------------------------------*\
+		Buttons
+\*----------------------------------*/
+/* Default button */
+.btn {
+    font-size: 1rem;
+    font-weight: $light;
+    line-height: 36px;
+    display: inline-block;
+    overflow: hidden;
+    height: 36px;
+    padding: 0 12px;
+    text-align: center;
+    white-space: nowrap;
+    text-decoration: none;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    text-overflow: ellipsis;
+    color: $color-white;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    background-color: $color-primary;
+    background-image: -webkit-gradient(linear, left top, left bottom, from($color-primary), to($color-primary-dark));
+    background-image: -webkit-linear-gradient(top, $color-primary, $color-primary-dark);
+    background-image: -moz-linear-gradient(top, $color-primary, $color-primary-dark);
+    background-image: -ms-linear-gradient(top, $color-primary, $color-primary-dark);
+    background-image: -o-linear-gradient(top, $color-primary, $color-primary-dark);
+    background-image: linear-gradient(to bottom, $color-primary, $color-primary-dark);
+    /* Hover state */
+    &:hover {
+        color: $color-white;
+        background-color: $color-primary;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(darken($color-primary, 5%)), to(darken($color-primary-dark, 5%)));
+        background-image: -webkit-linear-gradient(top, darken($color-primary, 5%), darken($color-primary-dark, 5%));
+        background-image: -moz-linear-gradient(top, darken($color-primary, 5%), darken($color-primary-dark, 5%));
+        background-image: -ms-linear-gradient(top, darken($color-primary, 5%), darken($color-primary-dark, 5%));
+        background-image: -o-linear-gradient(top, darken($color-primary, 5%), darken($color-primary-dark, 5%));
+        background-image: linear-gradient(to bottom, darken($color-primary, 5%), darken($color-primary-dark, 5%));
+    }
+    /* Active state */
+    &:active {
+        box-shadow: 0 1px 3px 1px rgba(0, 0, 0, .24);
+    }
+    /* Focus state shows only on mobile */
+    @media #{$small-and-down} {
+        &:focus {
+            color: $color-white;
+            background: darken($color-primary, 5%);
+        }
+    }
+    /* Big button */
+    &--large {
+        font-size: 1.4rem;
+        height: 56px;
+		line-height: 56px;
+    }
+	&--block {
+		width: 100%;
+	}
+}

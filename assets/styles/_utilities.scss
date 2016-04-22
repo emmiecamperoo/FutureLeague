@@ -1,0 +1,157 @@
+/*----------------------------------*\
+    Utilities
+\*----------------------------------*/
+/*
+	Text properties
+*/
+/* Align text left */
+.text-left {
+  text-align: left;
+}
+/* Align text in center */
+.text-center {
+  text-align: center;
+}
+/* Align text right */
+.text-right {
+  text-align: right;
+}
+/* Uppercase text */
+.text-uppercase {
+  text-transform: uppercase;
+}
+/*
+	Margins and paddings
+*/
+/* Mixin to create margins and paddings sizes. Margin/Padding size divides depending on the screen size */
+@mixin space-value ($class, $attribute, $val, $val2, $val3, $val4, $val5, $val6, $val7, $val8) {
+	/* For Large screens and up */
+  .#{$class}10 {
+    #{$attribute}: $val * 1px;
+  }
+  .#{$class}15 {
+    #{$attribute}: $val2 * 1px;
+  }
+  .#{$class}20 {
+    #{$attribute}: $val3 * 1px;
+  }
+  .#{$class}30 {
+    #{$attribute}: $val4 * 1px;
+  }
+  .#{$class}45 {
+    #{$attribute}: $val5 * 1px;
+  }
+  .#{$class}60 {
+    #{$attribute}: $val6 * 1px;
+  }
+  .#{$class}90 {
+    #{$attribute}: $val7 * 1px;
+  }
+  .#{$class}150 {
+    #{$attribute}: $val8 * 1px;
+  }
+	/* For Medium screens only. It divides by 1.5 */
+  @media #{$medium-only} {
+    .#{$class}10 {
+      #{$attribute}: $val * 1px / 1.5;
+    }
+    .#{$class}15 {
+      #{$attribute}: $val2 * 1px / 1.5;
+    }
+    .#{$class}20 {
+      #{$attribute}: $val3 * 1px / 1.5;
+    }
+    .#{$class}30 {
+      #{$attribute}: $val4 * 1px / 1.5;
+    }
+    .#{$class}45 {
+      #{$attribute}: $val5 * 1px / 1.5;
+    }
+    .#{$class}60 {
+      #{$attribute}: $val6 * 1px / 1.5;
+    }
+    .#{$class}90 {
+      #{$attribute}: $val7 * 1px / 1.5;
+    }
+    .#{$class}150 {
+      #{$attribute}: $val8 * 1px / 1.5;
+    }
+  }
+	/* For Small screens and down. It divides by 2 */
+  @media #{$small-and-down} {
+    .#{$class}10 {
+      #{$attribute}: $val * 1px / 2;
+    }
+    .#{$class}15 {
+      #{$attribute}: $val2 * 1px / 2;
+    }
+    .#{$class}20 {
+      #{$attribute}: $val3 * 1px / 2;
+    }
+    .#{$class}30 {
+      #{$attribute}: $val4 * 1px / 2;
+    }
+    .#{$class}45 {
+      #{$attribute}: $val5 * 1px / 2;
+    }
+    .#{$class}60 {
+      #{$attribute}: $val6 * 1px / 2;
+    }
+    .#{$class}90 {
+      #{$attribute}: $val7 * 1px / 2;
+    }
+    .#{$class}150 {
+      #{$attribute}: $val8 * 1px / 2;
+    }
+  }
+}
+/* Other margin classes */
+.margin0 {
+  margin: 0;
+}
+
+.mt0 {
+  margin-top: 0;
+}
+
+.mr0 {
+  margin-right: 0;
+}
+
+.mb0 {
+  margin-bottom: 0;
+}
+
+.ml0 {
+  margin-left: 0;
+}
+/* Include margins from mixin */
+@include space-value('mt', margin-top, 10, 15, 20, 30, 45, 60, 90, 150);
+@include space-value('mr', margin-right, 10, 15, 20, 30, 45, 60, 90, 150);
+@include space-value('mb', margin-bottom, 10, 15, 20, 30, 45, 60, 90, 150);
+@include space-value('ml', margin-left, 10, 15, 20, 30, 45, 60, 90, 150);
+/* Other padding classes  */
+.padding0 {
+  padding: 0;
+}
+
+.pt0 {
+  padding-top: 0;
+}
+
+.pr0 {
+  padding-right: 0;
+}
+
+.pb0 {
+  padding-bottom: 0;
+}
+
+.pl0 {
+  padding-left: 0;
+}
+/* Include paddings from mixin */
+@include space-value('pt', padding-top, 10, 15, 20, 30, 45, 60, 90, 150);
+@include space-value('pr', padding-right, 10, 15, 20, 30, 45, 60, 90, 150);
+@include space-value('pb', padding-bottom, 10, 15, 20, 30, 45, 60, 90, 150);
+@include space-value('pl', padding-left, 10, 15, 20, 30, 45, 60, 90, 150);

@@ -1,0 +1,33 @@
+/*----------------------------------*\
+		Newsletter
+\*----------------------------------*/
+/* Text under the newsletter */
+.newsletter__text {
+  font-size: 2rem;
+  font-weight: $light;
+}
+/* Mailchimp error properties */
+#mc_embed_signup {
+  .form-control.mce_inline_error {
+    border-color: #f00;
+  }
+
+  .form-row div.mce_inline_error {
+		background-color: transparent;
+		font-weight: $normal;
+		padding: 5px 0 0 0;
+  }
+
+  .btn {
+    @media #{$small-and-down} {
+      margin-top: 1.4rem;
+    }
+  }
+}
+/* Mailchimp response properties */
+#mce-responses {
+  .response {
+    font-size: 1.4rem;
+    font-weight: $light;
+  }
+}
