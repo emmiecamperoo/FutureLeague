@@ -109,7 +109,7 @@ var cssTasks = function(filename) {
       ]
     })
     .pipe(cssNano, {
-      safe: true
+      safe: true 
     })
     .pipe(function() {
       return gulpif(enabled.rev, rev());
@@ -171,6 +171,7 @@ gulp.task('fileinclude', function() {
     .pipe(fileinclude())
     .pipe(gulp.dest('dist/'))
     .pipe(browserSync.stream());
+    
   }
 });
 
@@ -271,10 +272,10 @@ gulp.task('watch', function() {
   gulp.watch(['bower.json', 'assets/manifest.json'], ['build']);
 });
 
-// ### Gulp
-// `gulp` - Run all the build tasks but don't clean up beforehand.
-// Generally you should be running `gulp build` instead of `gulp`.
-gulp.task('default', function(callback) {
+// ### Build
+// `gulp build` - Run all the build tasks but don't clean up beforehand.
+// Generally you should be running `gulp` instead of `gulp build`.
+gulp.task('build', function(callback) {
   runSequence('styles',
               'scripts',
               ['fonts', 'images'],
@@ -301,8 +302,8 @@ gulp.task('wiredep', function() {
     .pipe(gulp.dest(path.source + 'styles'));
 });
 
-// ### Gulp Build
-// `gulp build` - Run a complete build. To compile for production run `gulp build --production`.
-gulp.task('build', ['clean'], function() {
-  gulp.start('default');
+// ### Gulp
+// `gulp` - Run a complete build. To compile for production run `gulp --production`.
+gulp.task('default', ['clean'], function() {
+  gulp.start('build');
 });
