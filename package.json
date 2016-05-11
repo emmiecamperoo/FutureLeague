@@ -5,7 +5,7 @@
     "homepage": "https://www.elpy.io/",
     "private": true,
     "scripts": {
-		"start": "npm install",
+		"start": "node",
 		"postinstall": "bower install && gulp build --production && gulp html",
         "build": "bower install && gulp",
         "jshint": "gulp jshint",
