@@ -1,5 +1,5 @@
 {
-  "name": "flexbox-grid",
+  "name": "future-league",
   "homepage": "https://www.elpy.io/",
   "authors": [
     "Jan Perse <jan@elpy.io>"
@@ -7,10 +7,5 @@
   "private": true,
   "dependencies": {
     "jquery": "2.1.4"
-  },
-  "overrides": {
-    "swipebox": {
-
-    }
   }
 }

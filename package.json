@@ -1,5 +1,5 @@
 {
-  "name": "flexbox-grid",
+  "name": "future-league",
   "version": "1.0.0",
   "author": "Elpy",
   "homepage": "https://www.elpy.io/",
@@ -9,8 +9,12 @@
     "url": "https://janperse@bitbucket.org/elpyteam/flexbox-grid.git"
   },
   "engines": {
-    "node": ">= 0.12.0",
-    "npm": ">=2.1.5"
+    "node": "5.6.0",
+    "npm": "3.6.0"
+  },
+  "scripts": {
+    "start": "npm install",
+    "heroku-postbuild": "bower install && gulp build --production"
   },
   "devDependencies": {
     "asset-builder": "^1.1.0",
@@ -41,5 +45,9 @@
     "run-sequence": "^1.1.2",
     "traverse": "^0.6.6",
     "wiredep": "^2.2.2"
+  },
+  "dependencies": {
+    "express": "^4.13.4",
+    "foobar": "^1.1.0"
   }
 }
