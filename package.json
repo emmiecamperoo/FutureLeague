@@ -1,11 +1,10 @@
 {
-    "name": "individual",
+    "name": "future-league",
     "version": "1.0.0",
     "author": "Elpy",
     "homepage": "https://www.elpy.io/",
     "private": true,
     "scripts": {
-		"start": "node",
 		"postinstall": "bower install && gulp build --production && gulp html",
         "build": "bower install && gulp",
         "jshint": "gulp jshint",
