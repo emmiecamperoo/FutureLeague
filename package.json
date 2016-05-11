@@ -17,6 +17,7 @@
         "npm": "3.8.9"
     },
     "dependencies": {
+		"bower": "^1.7.9",
 		"jshint": "^2.8.0",
         "asset-builder": "^1.1.0",
         "browser-sync": "^2.8.2",
