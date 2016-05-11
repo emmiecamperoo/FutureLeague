@@ -271,9 +271,9 @@ gulp.task('watch', function() {
   gulp.watch(['bower.json', 'assets/manifest.json'], ['build']);
 });
 
-// ### Build
-// `gulp build` - Run all the build tasks but don't clean up beforehand.
-// Generally you should be running `gulp` instead of `gulp build`.
+// ### Gulp
+// `gulp` - Run all the build tasks but don't clean up beforehand.
+// Generally you should be running `gulp build` instead of `gulp`.
 gulp.task('default', function(callback) {
   runSequence('styles',
               'scripts',
@@ -301,8 +301,8 @@ gulp.task('wiredep', function() {
     .pipe(gulp.dest(path.source + 'styles'));
 });
 
-// ### Gulp
-// `gulp` - Run a complete build. To compile for production run `gulp --production`.
+// ### Gulp Build
+// `gulp build` - Run a complete build. To compile for production run `gulp build --production`.
 gulp.task('build', ['clean'], function() {
   gulp.start('default');
 });
