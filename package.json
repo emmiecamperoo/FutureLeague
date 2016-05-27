@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
 	"start": "gulp serve",
-    "postinstall": "./node_modules/bower/bin/bower install && gulp build --production && gulp html"
+    "prestart": "./node_modules/bower/bin/bower install && gulp build --production && gulp html"
   },
   "repository": {
     "type": "git",
