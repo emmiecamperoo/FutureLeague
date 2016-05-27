@@ -5,48 +5,45 @@
   "homepage": "https://www.elpy.io/",
   "private": true,
   "scripts": {
-    "heroku-postbuild": "bower install && gulp build --production && gulp html"
+    "postinstall": "bower install && gulp build --production && gulp html"
   },
   "repository": {
     "type": "git",
-    "url": "https://janperse@bitbucket.org/elpyteam/individual.git"
+    "url": "https://github.com/poviolabs/futureleague-.git"
   },
   "engines": {
     "node": "6.0.0",
     "npm": "3.8.9"
   },
   "dependencies": {
-    "asset-builder": "^1.1.0",
-    "bower": "1.7.9",
-    "browser-sync": "^2.8.2",
-    "del": "^1.2.1",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "2.3.1",
-    "gulp-changed": "^1.3.0",
-    "gulp-concat": "^2.6.0",
-    "gulp-cssnano": "^2.1.0",
-    "gulp-file-include": "^0.13.7",
-    "gulp-flatten": "0.1.1",
-    "gulp-if": "^1.2.5",
-    "gulp-imagemin": "^2.3.0",
-    "gulp-jshint": "^1.11.2",
-    "gulp-less": "^3.0.3",
-    "gulp-plumber": "^1.0.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-rev": "^6.0.0",
-    "gulp-sass": "^2.0.1",
-    "gulp-sourcemaps": "^1.5.2",
-    "gulp-uglify": "^1.2.0",
-    "imagemin-pngcrush": "^4.1.0",
-    "jshint-stylish": "^2.0.1",
-    "lazypipe": "^1.0.1",
-    "merge-stream": "^1.0.0",
-    "minimist": "^1.1.3",
-    "run-sequence": "^1.1.2",
-    "traverse": "^0.6.6",
-    "wiredep": "^2.2.2"
-  },
-  "devDependencies": {
-    "gulp-autoprefixer": "2.3.1"
+    "asset-builder": "1.1.0",
+    "browser-sync": "2.12.7",
+    "del": "2.2.0",
+    "gulp": "3.9.1",
+    "gulp-autoprefixer": "3.1.0",
+    "gulp-changed": "1.3.0",
+    "gulp-concat": "2.6.0",
+    "gulp-cssnano": "2.1.2",
+    "gulp-file-include": "0.13.7",
+    "gulp-flatten": "0.2.0",
+    "gulp-if": "2.0.1",
+    "gulp-imagemin": "3.0.1",
+    "gulp-jshint": "2.0.1",
+    "gulp-less": "3.1.0",
+    "gulp-plumber": "1.1.0",
+    "gulp-rename": "1.2.2",
+    "gulp-rev": "7.0.0",
+    "gulp-sass": "2.3.1",
+    "gulp-sourcemaps": "1.6.0",
+    "gulp-uglify": "1.5.3",
+    "imagemin-pngcrush": "4.1.0",
+    "jshint": "2.9.2",
+    "jshint-stylish": "2.2.0",
+    "lazypipe": "1.0.1",
+    "merge-stream": "1.0.0",
+    "minimist": "1.2.0",
+    "run-sequence": "1.1.5",
+    "traverse": "0.6.6",
+    "wiredep": "4.0.0"
   }
 }
