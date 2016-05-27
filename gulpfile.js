@@ -311,6 +311,6 @@ gulp.task('build', ['clean'], function() {
 });
 
 gulp.task('serve', serve({
-  root: ['dist/'],
+  root: ['dist', 'images', 'scripts', 'styles'],
   port: process.env.PORT || 5000
 }));
