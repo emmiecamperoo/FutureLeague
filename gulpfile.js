@@ -310,7 +310,10 @@ gulp.task('build', ['clean'], function() {
   gulp.start('default');
 });
 
-gulp.task('serve', serve({
-  root: ['/'],
-  port: process.env.PORT || 5000
-}));
+gulp.task('serve', function() {
+  connect.server({
+    root: ['dist'],
+    port: process.env.PORT || 5000, // localhost:5000
+    livereload: false
+  });
+});
