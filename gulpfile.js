@@ -20,6 +20,7 @@ var runSequence  = require('run-sequence');
 var sass         = require('gulp-sass');
 var sourcemaps   = require('gulp-sourcemaps');
 var uglify       = require('gulp-uglify');
+var serve		 = require('gulp-serve');
 
 // See https://github.com/austinpray/asset-builder
 var manifest = require('asset-builder')('./assets/manifest.json');
@@ -308,3 +309,8 @@ gulp.task('wiredep', function() {
 gulp.task('build', ['clean'], function() {
   gulp.start('default');
 });
+
+gulp.task('serve', serve({
+  root: ['dist'],
+  port: process.env.PORT || 5000
+}));
