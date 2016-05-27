@@ -109,7 +109,7 @@ var cssTasks = function(filename) {
       ]
     })
     .pipe(cssNano, {
-      safe: true 
+      safe: true
     })
     .pipe(function() {
       return gulpif(enabled.rev, rev());
@@ -171,7 +171,7 @@ gulp.task('fileinclude', function() {
     .pipe(fileinclude())
     .pipe(gulp.dest('dist/'))
     .pipe(browserSync.stream());
-    
+
   }
 });
 
@@ -275,9 +275,10 @@ gulp.task('watch', function() {
 // ### Build
 // `gulp build` - Run all the build tasks but don't clean up beforehand.
 // Generally you should be running `gulp` instead of `gulp build`.
-gulp.task('build', function(callback) {
+gulp.task('default', function(callback) {
   runSequence('styles',
               'scripts',
+			  'fileinclude',
               ['fonts', 'images'],
               callback);
 });
@@ -304,6 +305,6 @@ gulp.task('wiredep', function() {
 
 // ### Gulp
 // `gulp` - Run a complete build. To compile for production run `gulp --production`.
-gulp.task('default', ['clean'], function() {
-  gulp.start('build');
+gulp.task('build', ['clean'], function() {
+  gulp.start('default');
 });
