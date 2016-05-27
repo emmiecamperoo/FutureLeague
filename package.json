@@ -16,6 +16,7 @@
     "npm": "3.8.9"
   },
   "dependencies": {
+	"bower": "1.7.9",
     "asset-builder": "1.1.0",
     "browser-sync": "2.12.7",
     "del": "2.2.0",
