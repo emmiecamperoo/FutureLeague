@@ -5,8 +5,9 @@
   "homepage": "https://www.elpy.io/",
   "private": true,
   "scripts": {
-    "start": "gulp serve",
-    "postinstall": "./node_modules/bower/bin/bower install && gulp build --production && gulp html"
+	"postinstall": "bower install",
+	"prestart": "gulp build --production && gulp html",
+    "start": "gulp serve"
   },
   "repository": {
     "type": "git",
